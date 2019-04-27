@@ -2,9 +2,9 @@
 
 ## Scraping player names from link:
 
-Given constraint specified that the team has to be formed by only drawing players from the eight teams going to participate in IPL 2019.
+To select the players, we first needed to generate the set of players that would be playin in the IPL.
 
-To obtain a csv file of players to be considered during further data analysis, we built a Web Crawler which crawls through the website (http://www.espncricinfo.com/ci/content/squad/index.html?object=1165643) given to us and then through each team's link to obtain the desired data.
+To obtain a csv file of players to be considered during further data analysis, we built a Web Crawler which crawls through the website (http://www.espncricinfo.com/ci/content/squad/index.html?object=1165643) and then through each team's link to obtain the desired data.
 
 *BeautifulSoup* Python library was used and a html parsing of the page source resulted in a final list of 190 eligible players to choose from.
 	
