@@ -63,13 +63,13 @@ To summarise each player's performance in each department, we decided on creatin
 		
   Thus, the team of 11 optimal players has been selected out of which 4 players are foreign.
 	
-  - Selection of the Wicketkeeper
+  - **Selection of the Wicketkeeper**
     The batsman with the highest score of total catches/stumps is selected to be the wicket keeper. In this case, the wicket keeper is determined to be AB De Villiers.
 	
-  - Selection of Captain
+  - **Selection of Captain**
   Virat Kohli, selected based on being the player with the highest score.
   
-  - Selection of Vice Captain
+  - **Selection of Vice Captain**
    Kane Williamson, selected based on being the oversea player with highest score.
 			
   Final selected 11 players and their respective positions are present in the final_11.csv files.
