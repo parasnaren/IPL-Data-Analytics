@@ -18,24 +18,29 @@ To obtain a csv file of players to be considered during further data analysis, w
   All players not participating in the 2019 IPL season were removed by using the names scraped from the url provided.
   We generated our own features from the data to summarise the performance of the players in their respective categories, i.e. Batting, Bowling and Allround.
 	The columns generated were:
-		1. **Batting Average: Given by the runs scored / total matches played
-		2. Wickets per match: Total wickets taken / total matches played**
+		- **Batting Average: Given by the runs scored / total matches played**
+		- **Wickets per match: Total wickets taken / total matches played**
 	
   Player's were given value 'IND' if they were from India, 'OVS' otherwise.
 	
 To summarise each player's performance in each department, we decided on creating metrics/scores using the data.
   1. 	For creating the Batting score metric, we selected the Batting Average and Strike Rate. We combined the two values in a single column called 'Batting Score'.
 		The formula used was:
-				**Batting Score = Batting Average + 0.01 * Strike Rate**
+		
+		**Batting Score = Batting Average + 0.01 * Strike Rate**
+		
 		This was done because we wanted the Batting Average to have a higher value in determining the Batting Score than the Strike Rate.
 	
   2. 	For creating the Bowling score metric, we selected the Wicket_per_match and Economy. We combined the two values in a single column called 'Bowling Score'.
 		The formula used was:
-				**Batting Score = ( Bowling Average - 0.005 * Economy ) * Total matches played**
+		
+		**Batting Score = ( Bowling Average - 0.005 * Economy ) * Total matches played**
+		
 		Here, the higher the Economy, the lesser is the value of the bowler's performance. Hence the Economy was given a negative weightage. We also multiplied the resulting value with the matches played, to nullify the effect of those player's who played only a few matches and performed well. This was done in order to account for general consistency of the player.
 		
   3. The Allround score was calculated as the sum of the Bowling and Batting scores.
-				**Allround Score = Batting Score + Bowling Score**
+  
+		**Allround Score = Batting Score + Bowling Score**
 				
 
   Finally, we achieved scores for each player, in each department, for each year. In order to combine the scores from each year, we gave decreasing weightage over the years.
